@@ -63,7 +63,7 @@ dependencies {
     testCompile 'junit:junit:4.11'
     testCompile 'org.mockito:mockito-all:1.9.5'
     testRuntime "com.cyrusinnovation:mockito-groovy-support:1.2"
-
+    testCompile 'org.sl4j:jcl-over-slf4j:1.7.6'
     testCompile 'org.springframework:spring-test:3.0.7.RELEASE'
     testCompile 'org.hamcrest:hamcrest-all:1.3'
 
