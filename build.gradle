@@ -146,7 +146,7 @@ task copyPluginJarFile(dependsOn: jar, type: Copy) {
 
 task copyPluginDependencies(type: Copy) {
     from(configurations.crowd) {
-        exclude "activation*.jar", 'commons-codec*', 'commons-collections*', 'commons-land*', 'commons-logging*', 'ehcache*', 'jaxen*', 'jdom*', 'log4j*'
+        exclude "activation*.jar", 'commons-codec*', 'commons-collections*', 'commons-land*',  'ehcache*', 'jaxen*', 'jdom*', 'log4j*'
     }
     into project.pluginLibrariesDir
 }
