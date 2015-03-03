@@ -12,7 +12,7 @@ plugins {
 
 ext {
     teamCityVersion = '9.0.2'
-    crowdVersion = '2.6.7'
+    crowdVersion = '2.8.0'
     teamCityDistributionDir = "$projectDir/teamcitydist"
 
     if (project.hasProperty('teamCityDist')) {
