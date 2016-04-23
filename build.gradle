@@ -12,7 +12,7 @@ plugins {
 
 ext {
     teamCityVersion = '9.1.6'
-    crowdVersion = '2.8.3'
+    crowdVersion = '2.8.4'
     teamCityDistributionDir = "$projectDir/teamcitydist"
 
     if (project.hasProperty('teamCityDist')) {
@@ -39,6 +39,13 @@ configurations {
     }
 
     plugin
+}
+
+idea {
+    module {
+        downloadJavadoc = true
+        downloadSources = true
+    }
 }
 
 dependencies {
@@ -147,7 +154,7 @@ task copyPluginJarFile(dependsOn: jar, type: Copy) {
 
 task copyPluginDependencies(type: Copy) {
     from(configurations.crowd) {
-        exclude "activation*.jar", 'commons-codec*', 'commons-collections*', 'commons-land*', 'commons-logging*', 'ehcache*', 'jaxen*', 'jdom*', 'log4j*'
+        exclude "slf4j*"
     }
     into project.pluginLibrariesDir
 }

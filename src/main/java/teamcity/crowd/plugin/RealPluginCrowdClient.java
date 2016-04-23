@@ -50,7 +50,7 @@ public class RealPluginCrowdClient implements PluginCrowdClient {
     @Override
     public List<Group> getUserGroups(String username) {
         try {
-            return crowdClient.getGroupsForUser(username, 0, Integer.MAX_VALUE);
+            return crowdClient.getGroupsForNestedUser(username, 0, Integer.MAX_VALUE);
         } catch (OperationFailedException e) {
             loggerFactory.getServerLogger().error(OPERATION_FAILED_MESSAGE, e);
         } catch (InvalidAuthenticationException e) {
