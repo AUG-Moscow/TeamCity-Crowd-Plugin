@@ -11,8 +11,8 @@ plugins {
 }
 
 ext {
-    teamCityVersion = '9.1.6'
-    crowdVersion = '2.8.4'
+    teamCityVersion = '2017.2.2'
+    crowdVersion = '2.10.1'
     teamCityDistributionDir = "$projectDir/teamcitydist"
 
     if (project.hasProperty('teamCityDist')) {
@@ -169,7 +169,7 @@ buildPlugin.dependsOn = [copyPluginFile, copyPluginJarFile, copyPluginDependenci
 
 
 task prepareWrapper(type: Wrapper) {
-    gradleVersion = '2.2.1'
+    gradleVersion = '2.6'
 }
 
 artifacts {
